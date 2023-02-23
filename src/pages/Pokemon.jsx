@@ -9,6 +9,11 @@ const Pokemon = () => {
 
   const {id} = useParams()
 
+  const getPercentBar = (stat) => {
+    const percent = (stat * 100) / 255
+    return `${percent}%`
+  }
+
   useEffect(() => {
     const URL = `https://pokeapi.co/api/v2/pokemon/${id}/`
     axios
@@ -50,7 +55,7 @@ const Pokemon = () => {
             <h3>Type</h3>
             <div className='pokemon__body-type-details'>
               {pokemon?.types.map((type) => (
-                <div key={type.type.name}>
+                <div className={`pokemon__button pokemon__body-type-${type.type.name}`} key={type.type.name}>
                   <span>{type.type.name}</span>
                 </div>
               ))}
@@ -60,7 +65,7 @@ const Pokemon = () => {
             <h3>Abilities</h3>
             <div className='pokemon__body-abilities-details'>
               {pokemon?.abilities.map((ability) => (
-                <div key={ability.ability.name}>
+                <div className={`pokemon__button pokemon__body-type-${ability.ability.name}`} key={ability.ability.name}>
                   <span>{ability.ability.name}</span>
                 </div>
               ))}
@@ -76,13 +81,13 @@ const Pokemon = () => {
               <article className='pokemon__body__stats-details' key={stat.stat.name}>
                 <div className='pokemon__body__stats-details-info'>
                   <h4 className='pokemon__body__stats-details-info-name'>{stat.stat.name}</h4>
-                  <h5 className='pokemon__body__stats-details-info-stat'>{stat.base_stat}/150</h5>
+                  <h5 className='pokemon__body__stats-details-info-stat'>{stat.base_stat}/255</h5>
                 </div>
-                {/* <div>
-                  <div>
-                    <div></div>
+                <div className='pokemon__stat-bar'>
+                  <div className='pokemon__stat-barGray'>
+                    <div className='pokemon__stat-barProgress' style={{width: getPercentBar(stat.base_stat)}} ></div>
                   </div>
-                </div> */}
+                </div>
               </article>
             ))}
           </section>
