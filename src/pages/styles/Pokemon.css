@@ -1,0 +1,123 @@
+.pokemon {
+    max-width: 1024px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.pokemon__img-background {
+    height: 100px;
+    position: relative;
+    box-shadow: 0px -2px 5px 0px rgb(118 114 114);
+}
+
+.pokemon__img {
+    width: 150px;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+/* BODY */
+.pokemon__body {
+    background-color: #fffefe;
+    padding: 20px;
+    box-shadow: 0px 2px 5px 0px rgb(118 114 114);
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 16px;
+}
+
+.pokemon__body-id {
+    border: 1px  #000000;
+    background-color: rgb(247, 245, 245);
+    padding: 5px 10px;
+    align-self: center;
+}
+
+.pokemon__body-name {
+    color: rgb(118 114 114);
+    font-weight: bold;
+    align-self: center;
+}
+
+.pokemon__body__content-w-h {
+    display: flex;
+    gap: 20px;
+    align-self: center;
+}
+
+.pokemon__body-weight{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemon__body-height {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* TYPE / ABILITIES*/
+.pokemon__body__content-t-a {
+    display: flex;
+    justify-content: space-evenly;
+}
+/* TYPE */
+.pokemon__body-type {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pokemon__body-type h3 {
+    align-self: center;
+}
+
+.pokemon__body-type-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+/* ABILITIES */
+.pokemon__body-abilities {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pokemon__body-abilities h3 {
+    align-self: center;
+}
+
+.pokemon__body-abilities-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* STATS */
+.pokemon__body__stats {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pokemon__body__stats-title {
+
+}
+
+.pokemon__body__stats-details {
+    
+}
+
+.pokemon__body__stats-details-info {
+    display: flex;
+    justify-content: space-between;
+}
